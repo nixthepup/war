@@ -8,10 +8,12 @@ String username;
 
 // user inputs their name
 username = JOptionPane.showInputDialog("My King I am sorry but I...I forgot what your name is\n could you tell me again?");
-
+// makes first char uppercase found here:https://stackoverflow.com/questions/3904579/how-to-capitalize-the-first-letter-of-a-string-in-java
+username = username.substring(0, 1).toUpperCase() + username.substring(1);;
 //Tells the user the rules
 JOptionPane.showMessageDialog(null," Welcome King " + username + " I am Patsy your fathful servent!\n We shall be going to WAR!!! \n You and the mighty computer shall be given a number whoemever have the highest number shall win\n if you both get the same number then you will be given a MEGA number!!! Whoever has the largest MEGA number shall get three points");
-String name = username;
+String name = username;  
+
 // Goes to the game
 game(name);
 }
