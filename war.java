@@ -11,15 +11,15 @@ username = JOptionPane.showInputDialog("My King I am sorry but I...I forgot what
 
 //Tells the user the rules
 JOptionPane.showMessageDialog(null," Welcome King " + username + " I am Patsy your fathful servent!\n We shall be going to WAR!!! \n You and the mighty computer shall be given a number whoemever have the highest number shall win\n if you both get the same number then you will be given a MEGA number!!! Whoever has the largest MEGA number shall get three points");
-
+String name = username;
 // Goes to the game
-game();
+game(name);
 }
 
-public static void game(){
+public static void game(String name){
 
 // Vars
-int hand =Integer.parseInt(JOptionPane.showInputDialog("My King how many rounds will we be fighting today?","5"));
+int hand =Integer.parseInt(JOptionPane.showInputDialog("King " + name + " how many rounds will we be fighting today?","5"));
 int usrpoints =0;
 int compoints =0;
 
@@ -73,29 +73,31 @@ for (int i = 0; i < hand; i++){
 	String play;
 	if (usrpoints > compoints){
 		JOptionPane.showMessageDialog(null,"My Leige we have won the war!!");
-		playmorewin();
+		playmorewin(name);
 		
 		}else { 
 			JOptionPane.showMessageDialog(null,"My Leige we have lost the war we must flee \n they have killed all our troops we are the only ones left ");
-			playmorelost();
+			playmorelost(name);
 			}}
 	
 	
      
-public static void playmorewin(){
+public static void playmorewin(String name){
+	name=name;
 	String play = "nix";
-	play = JOptionPane.showInputDialog("Do you want to go back to war once more my King, I can ready the troops on your command! (Yes or no)");
+	play = JOptionPane.showInputDialog("King " + name + " do you want to go back to war once more , I can ready the troops on your command! (Yes or no)");
 		if (play.equalsIgnoreCase("yes")){
-			game();
+			game(name);
 		}else if (play.equalsIgnoreCase("no")){
 		JOptionPane.showMessageDialog(null,"We shall rest up then and wait for your command it has been an honor to serve under you my Lord!");
 		System.exit(0);}else{System.exit(0);}}
 		
-		public static void playmorelost(){
+		public static void playmorelost(String name){
+			name = name;
 			String play = "nix";
-			play = JOptionPane.showInputDialog("Do you want to go back to war once more my King, I can find some commane folk to join us! (Yes or no)");
+			play = JOptionPane.showInputDialog("King " + name + " do you want to go back to war once more my King, I can find some commane folk to join us! (Yes or no)");
 			if (play.equalsIgnoreCase("yes")){
-			game();
+			game(name);
 		}else if (play.equalsIgnoreCase("no")){
 		JOptionPane.showMessageDialog(null,"We shall go hide out in camealot then!");
 			System.exit(0);}}
