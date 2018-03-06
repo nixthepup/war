@@ -1,5 +1,5 @@
 import javax.swing.JOptionPane;
-public class war{
+public class test{
 
 public static void intro(){
 
@@ -19,9 +19,7 @@ game();
 public static void game(){
 
 // Vars
-String inputstring = JOptionPane.showInputDialog("My King how many rounds will we be fighting today?","5");
-int hand;
-hand = Integer.parseInt(inputstring);
+int hand =Integer.parseInt(JOptionPane.showInputDialog("My King how many rounds will we be fighting today?","5"));
 int usrpoints =0;
 int compoints =0;
 
@@ -66,7 +64,7 @@ for (int i = 0; i < hand; i++){
 		
 			battlewin = "You";
 			usrpoints = usrpoints + 3;
-			System.out.print("Your first number was " + usernum + " The computers first number was " + comnum + "\n Time for the MEGA number! /n the computers MEGA number is " + battletotalcom + " /n Yours is.... " + battletotaluser + " You won the battle!" + "\n You have " + usrpoints + " Points \n" + " The computer has " + compoints + " Points");
+			JOptionPane.showMessageDialog(null,"Your first number was " + usernum + " The computers first number was " + comnum + "\n Time for the MEGA number! /n the computers MEGA number is " + battletotalcom + " /n Yours is.... " + battletotaluser + " You won the battle!" + "\n You have " + usrpoints + " Points \n" + " The computer has " + compoints + " Points");
 	}else{
 		battlewin = "Computer";
 		compoints = compoints + 3;
