@@ -12,9 +12,10 @@ username = JOptionPane.showInputDialog("My King I am sorry but I...I forgot what
 username = username.substring(0, 1).toUpperCase() + username.substring(1);;
 //Tells the user the rules
 JOptionPane.showMessageDialog(null," Welcome King " + username + " I am Patsy your fathful servent!\n We shall be going to WAR!!! \n You and the mighty computer shall be given a number whoemever have the highest number shall win\n if you both get the same number then you will be given a MEGA number!!! Whoever has the largest MEGA number shall get three points");
+//turns username var to name var for easier typeing of code pointless to have
 String name = username;  
 
-// Goes to the game
+// Goes to the game and brings the username with it
 game(name);
 }
 
