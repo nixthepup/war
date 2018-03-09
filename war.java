@@ -6,12 +6,22 @@
 
 	        // Vars
 	        String username;
-	        String title = JOptionPane.showInputDialog("In this day and age I am not able to tell if you are a King or a Queen..... \n so? answer me:","King");
+	        String title;
+	       do{  title = JOptionPane.showInputDialog("In this day and age I am not able to tell if you are a King or a Queen..... \n so? answer me:");
+			 }
+			 while((!title.equals("king")) && (!title.equals("queen")));
+				 //title = JOptionPane.showInputDialog("You don't have to be a virgin to be a king or queen though i can tell you are.....\n ","king or queen");
+				 
 			 
+				 
+				 
+				  
+				 
 			 title = title.substring(0, 1).toUpperCase() + title.substring(1);;
 			 title = title + " ";
+			
 	        // user inputs their name
-	        username = JOptionPane.showInputDialog("My " + title + " I am sorry but I...I forgot what your name is\n could you tell me again?"," Nix");
+	        username = JOptionPane.showInputDialog("My " + title + " I am sorry but I...I forgot what your name is\n could you tell me again?");
 	     
 	        // makes first char uppercase found here:https://stackoverflow.com/questions/3904579/how-to-capitalize-the-first-letter-of-a-string-in-java
 	        username = username.substring(0, 1).toUpperCase() + username.substring(1);;
@@ -80,7 +90,7 @@ Random num = new Random();
 	                }
 	            }
 	        }
-	        String play;
+	        
 	        if (usrpoints > compoints) {
 	            JOptionPane.showMessageDialog(null, "My Leige we have won the war!!");
 	            playmorewin(name,title);
@@ -120,10 +130,7 @@ Random num = new Random();
 	        }
 	    }
 
-	    public static int getRandom(int max) {
-	        return (int)(Math.random() * max);
-	    }
-
+	 
 	    public static void main(String[] args) {
 	        intro();
 	    }
