@@ -1,6 +1,6 @@
 	import javax.swing.JOptionPane;
 	import java.util.*;
-	public class test {
+	public class war {
 
 	    public static void intro() {
 
