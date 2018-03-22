@@ -1,3 +1,4 @@
+	//imports
 	import javax.swing.JOptionPane;
 	import java.util.*;
 	public class war {
@@ -35,6 +36,7 @@
 	    }
 
 	    public static void game(String name,String title) {
+			//random number maker
 Random num = new Random();
 	        // Vars
 	        int hand = Integer.parseInt(JOptionPane.showInputDialog( title + name + " how many rounds will we be fighting today?", "5"));
@@ -95,11 +97,14 @@ Random num = new Random();
 	            JOptionPane.showMessageDialog(null, "My Leige we have won the war!!");
 	            playmorewin(name,title);
 
-	        } else {
+	        } else if (usrpoints < compoints){
 	            JOptionPane.showMessageDialog(null, "My Leige we have lost the war we must flee \n they have killed all our troops we are the only ones left ");
 	            playmorelost(name,title);
-	        }
-	    }
+	        } else{
+				JOptionPane.showMessageDialog(null,title + name + " We are at a standstill neither side as gained any ground! \n We must retreat at wait a week to fight agin!");
+				JOptionPane.showMessageDialog(null,"(ONE WEEK LATER!!!!!!!!");
+				game(name,title);
+	    }}
 
 
 
@@ -121,7 +126,7 @@ Random num = new Random();
 	        name = name;
 	        title = title;
 	        String play = "nix";
-	        play = JOptionPane.showInputDialog(title + name + " do you want to go back to war once more my " + title + ", I can find some common folk to join us! (Yes or no)");
+	        play = JOptionPane.showInputDialog(title + name + " do you want to go back to war once more, I can find some common folk to join us! (Yes or no)");
 	        if (play.equalsIgnoreCase("yes")|| play.equalsIgnoreCase("y")) {
 	            game(name,title);
 	        } else if (play.equalsIgnoreCase("no") || play.equalsIgnoreCase("n")) {
