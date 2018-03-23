@@ -27,7 +27,7 @@
 	        // makes first char uppercase found here:https://stackoverflow.com/questions/3904579/how-to-capitalize-the-first-letter-of-a-string-in-java
 	        username = username.substring(0, 1).toUpperCase() + username.substring(1);;
 	        //Tells the user the rules
-	        JOptionPane.showMessageDialog(null, " Welcome " + title + username + " I am Patsy your fathful servent!\n We shall be going to WAR!!! \n You and the mighty computer shall send out your troops and they shall fight I shall be watching the battle for you and shall report back at the end of the battle. \n how many troops you sent how many the computer sent and who won the battle! \n if you both send out the same number of troops then  I shall call for renforcements and so shall our foe!);
+	        JOptionPane.showMessageDialog(null, " Welcome " + title + username + " I am Patsy your fathful servent!\n We shall be going to WAR!!! \n You and the mighty computer shall send out your troops and they shall fight I shall be watching the battle for you and shall report back at the end of the battle. \n how many troops you sent how many the computer sent and who won the battle! \n if you both send out the same number of troops then  I shall call for renforcements and so shall our foe!");
 	        //turns username var to name var for easier typeing of code pointless to have
 	        String name = username;
 
@@ -90,11 +90,11 @@ Random num = new Random();
 
 	                    battlewin = "You";
 	                    usrpoints = usrpoints + 3;
-	                    JOptionPane.showMessageDialog(null, "You had sent out " + usernum + " troops The computer sent out  " + comnum + " troops \n I had called more troops to come to our aid ! /n the computer had called for " + battletotalcom + "toops \n I called for .... " + battletotaluser + " troops You won the battle!" + "\n You have " + usrpoints + " wins \n" + " The computer has " + compoints + " wins");
+	                    JOptionPane.showMessageDialog(null, "You had sent out " + usernum + " troops The computer sent out  " + comnum + " troops \n I had called more troops to come to our aid! /n the computer had called for " + battletotalcom + "troops \n I called for .... " + battletotaluser + " troops You won the battle!" + "\n You have " + usrpoints + " wins \n" + " The computer has " + compoints + " wins");
 	                } else if (battletotaluser<battletotalcom){
 	                    battlewin = "Computer";
 	                    compoints = compoints + 3;
-	                    JOptionPane.showMessageDialog(null, "You had sent out " + usernum + " troops The computer sent out  " + comnum + " troops \n I had called more troops to come to our aid ! /n the computer had called for " + battletotalcom + "toops \n I called for .... " + battletotaluser + " You have lost the battle!" + "\n You have " + usrpoints + " w \n" + " The computer has " + compoints + " wins");
+	                    JOptionPane.showMessageDialog(null, "You had sent out " + usernum + " troops The computer sent out  " + comnum + " troops \n I had called more troops to come to our aid ! /n the computer had called for " + battletotalcom + "troops \n I called for.... " + battletotaluser + " You have lost the battle!" + "\n You have " + usrpoints + " wins \n" + " The computer has " + compoints + " wins");
 	                }
 	            }
 	        }
