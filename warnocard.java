@@ -67,12 +67,15 @@ Random num = new Random();
 	            //makes a var called battlewin and sets it to nix as a placeholdervale
 	            String battlewin = "nix";
 					int usernum = Integer.parseInt(JOptionPane.showInputDialog("How many troops shall I send out my " + title+ "?"));
-					if (usernum >=11){
+					
+						while(usernum >10){
+						
 						JOptionPane.showMessageDialog(null, "We only have enough troops to send out 10 at a time");
-						 usernum = Integer.parseInt(JOptionPane.showInputDialog("How many troops shall I send out my " + title +"?"));} 
-						else if (usernum<=0){
+						 usernum = Integer.parseInt(JOptionPane.showInputDialog("How many troops shall I send out my " + title +"?",0));}
+						 
+							while(usernum<=0){
 							JOptionPane.showMessageDialog(null, "We must send out at least one troop otherwise we will be over ran!!!!"); 
-							usernum = Integer.parseInt(JOptionPane.showInputDialog("How many troops shall I send out my " + title +"?"));}
+							usernum = Integer.parseInt(JOptionPane.showInputDialog("How many troops shall I send out my " + title +"?",0));}
 	            // checks to see if the var usernum is greater than comnum and if it is it sets the var win to the string "You" and adds a point to the  users point (var usrpoints) and displays a message saying what number/card was drew by both the user and the computer and the winner and also the total number of points of both the user and the computer
 	            if (usernum > comnum) {
 	                win = "You";
@@ -97,7 +100,7 @@ Random num = new Random();
 	                    JOptionPane.showMessageDialog(null, "You had sent out " + usernum + " troops The computer sent out  " + comnum + " troops \n I had called more troops to come to our aid ! /n the computer had called for " + battletotalcom + "troops \n I called for.... " + battletotaluser + " You have lost the battle!" + "\n You have " + usrpoints + " wins \n" + " The computer has " + compoints + " wins");
 	                }
 	            }
-	        }
+	        
 	        
 	        if (usrpoints > compoints) {
 	            JOptionPane.showMessageDialog(null, "My Leige we have won the war!!");
@@ -110,7 +113,7 @@ Random num = new Random();
 				JOptionPane.showMessageDialog(null,title + name + " We are at a standstill neither side as gained any ground! \n We must retreat at wait a week to fight agin!");
 				JOptionPane.showMessageDialog(null,"(ONE WEEK LATER!!!!!!!!");
 				game(name,title);
-	    }}
+	    }}}
 
 
 
