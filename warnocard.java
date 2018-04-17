@@ -11,13 +11,7 @@
 	       do{  title = JOptionPane.showInputDialog("In this day and age I am not able to tell if you are a King or a Queen..... \n so? answer me:");
 			 }
 			 while((!title.equals("king")) && (!title.equals("queen")));
-				 
-				 
-			 
-				 
-				 
-				  
-				 
+			
 			 title = title.substring(0, 1).toUpperCase() + title.substring(1);;
 			 title = title + " ";
 			
@@ -101,7 +95,7 @@ Random num = new Random();
 	                }
 	            }
 	        
-	        
+		}
 	        if (usrpoints > compoints) {
 	            JOptionPane.showMessageDialog(null, "My Leige we have won the war!!");
 	            playmorewin(name,title);
@@ -113,7 +107,9 @@ Random num = new Random();
 				JOptionPane.showMessageDialog(null,title + name + " We are at a standstill neither side as gained any ground! \n We must retreat at wait a week to fight agin!");
 				JOptionPane.showMessageDialog(null,"(ONE WEEK LATER!!!!!!!!");
 				game(name,title);
-	    }}}
+	    }}
+	    
+	    
 
 
 
@@ -130,7 +126,7 @@ Random num = new Random();
 	            System.exit(0);
 	        }
 	    }
-
+				
 	    public static void playmorelost(String name,String title) {
 	        name = name;
 	        title = title;
@@ -141,8 +137,8 @@ Random num = new Random();
 	        } else if (play.equalsIgnoreCase("no") || play.equalsIgnoreCase("n")) {
 	            JOptionPane.showMessageDialog(null, "We shall go to in camealot then!");
 	            System.exit(0);
-	        }
-	    }
+	        }}
+	    
 
 	 
 	    public static void main(String[] args) {
