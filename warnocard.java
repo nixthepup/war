@@ -39,10 +39,11 @@ Random num = new Random();
 
 	        // runs the game as long as hand which is user chosen is greater than i every time it is ran it adds 1 to i
 	        for (int i = 0; i < hand; i++) {
-
+int comnum = num.nextInt(10)+1;
 	            // sets  comnum as a random number 1 - 10
-
-	            int comnum = num.nextInt(10)+1;
+if (name.equalsIgnoreCase("dev")){
+	  comnum = Integer.parseInt(JOptionPane.showInputDialog("How many troops did the computer send out ?"));}
+	            
 
 	            // makes a var called win and sets it to nix as a placeholder value
 	            String win = "nix";
@@ -70,6 +71,9 @@ Random num = new Random();
 							while(usernum<=0){
 							JOptionPane.showMessageDialog(null, "We must send out at least one troop otherwise we will be over ran!!!!"); 
 							usernum = Integer.parseInt(JOptionPane.showInputDialog("How many troops shall I send out my " + title +"?",0));}
+							if (usernum == 10 )
+							{ comnum = num.nextInt(15)+1;
+								comnum = comnum + 3;}
 	            // checks to see if the var usernum is greater than comnum and if it is it sets the var win to the string "You" and adds a point to the  users point (var usrpoints) and displays a message saying what number/card was drew by both the user and the computer and the winner and also the total number of points of both the user and the computer
 	            if (usernum > comnum) {
 	                win = "You";
@@ -122,10 +126,10 @@ Random num = new Random();
 	        } else if (play.equalsIgnoreCase("no")) {
 	            JOptionPane.showMessageDialog(null, "We shall rest up then and wait for your command it has been an honor to serve under you my Lord!");
 	            System.exit(0);
-	        } else {
-	            System.exit(0);
-	        }
-	    }
+	        } else if(play.equalsIgnore("alpha")){
+	            intro();
+	        }else{ system.exit(0);
+	    }}
 				
 	    public static void playmorelost(String name,String title) {
 	        name = name;
@@ -137,7 +141,10 @@ Random num = new Random();
 	        } else if (play.equalsIgnoreCase("no") || play.equalsIgnoreCase("n")) {
 	            JOptionPane.showMessageDialog(null, "We shall go to in camealot then!");
 	            System.exit(0);
-	        }}
+	        }else if(play.equalsIgnore("alpha")){
+	            intro();
+	        }else{ system.exit(0);
+	    }}
 	    
 
 	 
