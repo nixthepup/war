@@ -1,0 +1,16 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import javax.swing.*;
+
+
+public class warlast extends JFrame
+{
+
+private Jlabel titleLabel;
+
+
+
+
+
+}
