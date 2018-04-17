@@ -126,9 +126,9 @@ if (name.equalsIgnoreCase("dev")){
 	        } else if (play.equalsIgnoreCase("no")) {
 	            JOptionPane.showMessageDialog(null, "We shall rest up then and wait for your command it has been an honor to serve under you my Lord!");
 	            System.exit(0);
-	        } else if(play.equalsIgnore("alpha")){
+	        } else if(play.equalsIgnoreCase("alpha")){
 	            intro();
-	        }else{ system.exit(0);
+	        }else{ System.exit(0);
 	    }}
 				
 	    public static void playmorelost(String name,String title) {
@@ -141,9 +141,9 @@ if (name.equalsIgnoreCase("dev")){
 	        } else if (play.equalsIgnoreCase("no") || play.equalsIgnoreCase("n")) {
 	            JOptionPane.showMessageDialog(null, "We shall go to in camealot then!");
 	            System.exit(0);
-	        }else if(play.equalsIgnore("alpha")){
+	        }else if(play.equalsIgnoreCase("alpha")){
 	            intro();
-	        }else{ system.exit(0);
+	        }else{ System.exit(0);
 	    }}
 	    
 
